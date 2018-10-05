@@ -1,5 +1,11 @@
-FROM node:8
+FROM mhart/alpine-node:8
 
-RUN npm install --production
+WORKDIR /opt/app
 
-CMD [ "npm", "start" ]
+RUN echo 'npm install --production' > /usr/bin/start.sh
+
+# daemon for cron jobs
+RUN echo 'crond' >> /usr/bin/start.sh
+
+# npm start, make sure to have a start attribute in "scripts" in package.json
+RUN echo 'npm start' >> /usr/bin/start.sh
