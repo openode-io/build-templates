@@ -14,8 +14,8 @@ RUN touch /usr/bin/start.sh # this is the script which will run on start
 # RUN echo 'redis-server &' >> /usr/bin/start.sh
 
 # daemon for cron jobs
-#RUN echo 'echo will install crond...' >> /usr/bin/start.sh
-#RUN echo 'crond' >> /usr/bin/start.sh
+RUN echo 'echo will install crond...' >> /usr/bin/start.sh
+RUN echo 'crond' >> /usr/bin/start.sh
 
 RUN echo 'npm install --production' >> /usr/bin/start.sh
 
