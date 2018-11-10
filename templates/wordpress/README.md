@@ -6,8 +6,10 @@ directory, then just type 'openode deploy'.
 
 Make sure to set these variables in your wp-config.php:
 
+```
 define( 'WP_HOME', 'http://your-hostname/' );
 define( 'WP_SITEURL', 'http://your-hostname/' );
+```
 
 We recommend using an external MYSQL database.
 Example free Mysql DB: https://www.freemysqlhosting.net/
