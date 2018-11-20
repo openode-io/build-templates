@@ -29,5 +29,5 @@ RUN echo 'shards install --production' >> /usr/bin/start.sh
 RUN echo 'amber db migrate' >> /usr/bin/start.sh
 
 # IMPORTANT: change "YOUR-APP-NAME" to your project name (as in shard.yml)
-RUN echo 'shards build YOUR-APP-NAME --release' >> /usr/bin/start.sh
+RUN echo 'shards build YOUR-APP-NAME --release --static --no-debug' >> /usr/bin/start.sh
 RUN echo 'bin/YOUR-APP-NAME' >> /usr/bin/start.sh
