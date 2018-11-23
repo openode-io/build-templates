@@ -1,5 +1,6 @@
-# java-minimal
+# rust-minimal
 
-Template for java using a prebuild jar file. Note that the jar file must be compiled
-and must listen to port 80 on startup.
-Make sure to change YOUR-JAR-FILE in the Dockerfile.
+Template for the rust programming. Make sure to change YOUR-BINARY-FILE in
+the Dockerfile. Listen to 0.0.0.0:80. More likely you will need to increase the
+MAX_BUILD_DURATION: openode set-config MAX_BUILD_DURATION 200 depending on your
+project size.
