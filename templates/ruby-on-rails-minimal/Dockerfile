@@ -7,7 +7,7 @@ ENV RAILS_ROOT /opt/app
 
 WORKDIR /opt/app
 
-RUN touch /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
 
 RUN apk add --no-cache build-base tzdata git nodejs # sqlite-dev || postgressql-dev
 

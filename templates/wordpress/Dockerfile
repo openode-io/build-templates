@@ -2,7 +2,7 @@ FROM php:7.2-apache
 
 WORKDIR /opt/app
 
-RUN touch /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
 RUN docker-php-ext-install mysqli
 
 # Map /opt/app to the default apache home

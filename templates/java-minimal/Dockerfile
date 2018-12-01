@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 WORKDIR /opt/app
 
-RUN touch /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
 
 # if you need redis, uncomment the lines below
 # RUN apk --update add redis

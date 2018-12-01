@@ -11,7 +11,7 @@ RUN apk --update add make python gcc g++
 RUN npm install -g nodemon
 RUN npm install -g pm2
 
-RUN touch /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
 
 # Basic npm start verification
 RUN echo 'nb=`cat package.json | grep start | wc -l` && if test "$nb" = "0" ; then echo "*** Boot issue: No start command found in your package.json in the scripts. See https://docs.npmjs.com/cli/start" ; exit 1 ; fi' >> /usr/bin/start.sh

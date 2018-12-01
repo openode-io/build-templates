@@ -5,7 +5,7 @@ WORKDIR /opt/app
 # add maven for building the application
 RUN apk add maven
 
-RUN touch /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
 
 # if you need redis, uncomment the lines below
 # RUN apk --update add redis

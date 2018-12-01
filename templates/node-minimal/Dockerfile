@@ -4,7 +4,7 @@ WORKDIR /opt/app
 
 ENV PORT=80
 
-RUN touch /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
 
 # if you need a build script, uncomment the line below
 # RUN echo 'sh mybuild.sh' >> /usr/bin/start.sh
