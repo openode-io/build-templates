@@ -23,7 +23,7 @@ Make sure to follow our convention:
 * Create a repository under templates using downcase name.
 * Provide a Dockerfile
 * Make sure to use WORKDIR /opt/app
-* You must write to a build script with path /usr/bin/start.sh
+* Make sure to expose port 80
 * Provide a README.md
 
 See several examples in the templates folder.
