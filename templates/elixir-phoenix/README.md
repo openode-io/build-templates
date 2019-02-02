@@ -1,6 +1,7 @@
 # elixir-phoenix
 
 Template for the Phoenix framework based on the Elixir language.
+Recommended minimum plan: 1 GB Memory
 More likely you'll need to increase the max. build duration, for example (default is 150):
 > openode set-config MAX_BUILD_DURATION 300
 
