@@ -3,17 +3,17 @@ FROM google/dart
 
 WORKDIR /opt/app
 
-RUN echo 'set -e' > /usr/bin/start.sh # this is the script which will run on start
+RUN echo 'set -e' > /boot.sh # this is the script which will run on boot
 
-RUN echo 'pub get' >> /usr/bin/start.sh
-RUN echo 'pub get --offline' >> /usr/bin/start.sh
+RUN echo 'pub get' >> /boot.sh
+RUN echo 'pub get --offline' >> /boot.sh
 
 # activate webdev:
-RUN echo 'pub global activate webdev' >> /usr/bin/start.sh
-RUN echo 'export PATH="$PATH":"$HOME/.pub-cache/bin"' >> /usr/bin/start.sh
+RUN echo 'pub global activate webdev' >> /boot.sh
+RUN echo 'export PATH="$PATH":"$HOME/.pub-cache/bin"' >> /boot.sh
 
 # build
-RUN echo 'webdev build' >> /usr/bin/start.sh
+RUN echo 'webdev build' >> /boot.sh
 
 # start the server
-RUN echo 'dart bin/server.dart' >> /usr/bin/start.sh
+CMD sh /boot.sh && dart bin/server.dart
