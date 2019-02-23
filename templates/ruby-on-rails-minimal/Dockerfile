@@ -14,10 +14,6 @@ RUN apk add --no-cache build-base tzdata git nodejs # sqlite-dev || postgressql-
 # if you need a build script, uncomment the line below
 # RUN echo 'sh mybuild.sh' >> /boot.sh
 
-# if you need redis, uncomment the lines below
-# RUN apk --update add redis
-# RUN echo 'redis-server &' >> /boot.sh
-
 # daemon for cron jobs
 RUN echo 'echo will install crond...' >> /boot.sh
 RUN echo 'crond' >> /boot.sh

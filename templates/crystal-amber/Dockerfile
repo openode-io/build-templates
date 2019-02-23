@@ -13,10 +13,6 @@ RUN echo 'set -e' > /boot.sh # this is the script which will run on boot
 # if you need a build script, uncomment the line below
 # RUN echo 'sh mybuild.sh' >> /boot.sh
 
-# if you need redis, uncomment the lines below
-# RUN apk --update add redis
-# RUN echo 'redis-server &' >> /boot.sh
-
 # daemon for cron jobs
 RUN echo 'echo will install crond...' >> /boot.sh
 RUN echo 'crond' >> /boot.sh
