@@ -1,0 +1,7 @@
+  rethinkdb:
+    image: rethinkdb
+    volumes:
+      - /opt/app/db/:/opt/app/db/
+    expose:
+      - 28015
+    command: rethinkdb --bind all -d /opt/app/db/ --no-update-check
