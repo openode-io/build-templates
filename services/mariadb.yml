@@ -1,0 +1,7 @@
+  mariadb:
+    image: mariadb
+    volumes:
+      - /opt/app/db/:/var/lib/mysql/
+    environment:
+      MYSQL_ROOT_PASSWORD: my-password
+      MYSQL_DATABASE: my_database_name
