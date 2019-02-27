@@ -1,0 +1,7 @@
+  postgres:
+    image: postgres:11-alpine
+    volumes:
+      - /opt/app/db/:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mydbname
