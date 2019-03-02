@@ -9,6 +9,7 @@ RUN touch /boot.sh # this is the script which will run on boot
 # daemon for cron jobs
 # RUN echo 'echo will install crond...' >> /boot.sh
 # RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 # start it!
 CMD sh /boot.sh && sbt "run 80"

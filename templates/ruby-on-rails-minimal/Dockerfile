@@ -17,6 +17,7 @@ RUN apk add --no-cache build-base tzdata git nodejs # sqlite-dev || postgressql-
 # daemon for cron jobs
 RUN echo 'echo will install crond...' >> /boot.sh
 RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 RUN echo 'echo bundle install' >> /boot.sh
 RUN echo 'bundle install --jobs 20 --retry 5 --without development test' >> /boot.sh

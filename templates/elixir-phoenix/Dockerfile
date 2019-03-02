@@ -13,6 +13,7 @@ RUN apk add nodejs npm make gcc erlang-dev libc-dev
 # Daemon for cron jobs (optional)
 # RUN echo 'echo will install crond...' >> /boot.sh
 # RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 # Main installation
 RUN echo 'yes | mix local.hex' >> /boot.sh

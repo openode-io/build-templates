@@ -19,6 +19,7 @@ RUN echo 'nb=`cat package.json | grep start | wc -l` && if test "$nb" = "0" ; th
 # daemon for cron jobs
 RUN echo 'echo will install crond...' >> /boot.sh
 RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 # install packages
 RUN echo 'npm install --production' >> /boot.sh

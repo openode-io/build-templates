@@ -14,8 +14,9 @@ RUN echo 'set -e' > /boot.sh # this is the script which will run on boot
 # RUN echo 'sh mybuild.sh' >> /boot.sh
 
 # daemon for cron jobs
-RUN echo 'echo will install crond...' >> /boot.sh
-RUN echo 'crond' >> /boot.sh
+# RUN echo 'echo will install crond...' >> /boot.sh
+# RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 # compile shards:
 RUN echo 'shards install --production' >> /boot.sh

@@ -9,6 +9,7 @@ RUN echo 'set -e' > /boot.sh # this is the script which will run on boot
 # daemon for cron jobs
 # RUN echo 'echo will install crond...' >> /boot.sh
 # RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 RUN echo 'lein uberjar' >> /boot.sh
 

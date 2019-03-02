@@ -8,6 +8,7 @@ RUN echo 'set -e' >> /boot.sh
 
 # daemon for cron jobs
 RUN echo 'crond' >> /boot.sh
+# RUN echo 'crontab .openode.cron' >> /boot.sh
 
 RUN echo 'npm install --production' >> /boot.sh
 
