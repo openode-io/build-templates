@@ -28,7 +28,4 @@ RUN echo 'npm install --production' >> /boot.sh
 RUN mkdir -p logs
 
 # npm start, make sure to have a start attribute in "scripts" in package.json
-RUN echo 'pm2 --output logs/out.log --error logs/error.log start npm -- start' >> /boot.sh
-RUN echo 'sh' >> /boot.sh
-
-CMD sh /boot.sh
+CMD sh /boot.sh && pm2-runtime --output logs/out.log --error logs/error.log start npm -- start
