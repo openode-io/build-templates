@@ -2,6 +2,8 @@ FROM node:12-alpine
 
 WORKDIR /opt/app
 
+ENV PORT=80
+
 # daemon for cron jobs
 RUN echo 'crond' > /boot.sh
 # RUN echo 'crontab .openode.cron' >> /boot.sh
@@ -17,5 +19,4 @@ RUN npm install --production
 # Bundle app source
 COPY . .
 
-EXPOSE 80
 CMD sh /boot.sh && npm start
