@@ -1,9 +1,5 @@
-FROM yoctu/nodered
-
-WORKDIR /opt/app
+FROM nodered/node-red
 
 ENV PORT=80
 
-RUN echo 'crond' > /boot.sh
-
-CMD sh /boot.sh && npm start
+USER root
