@@ -1,6 +1,4 @@
 # Nodered
-[![Github Issues](http://img.shields.io/github/issues/yoctu/nodered)](https://github.com/yoctu/nodered/issues)
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 
 NodeRed (https://nodered.org) Docker Template
 
