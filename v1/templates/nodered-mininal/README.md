@@ -7,14 +7,9 @@ NodeRed (https://nodered.org) Docker Template
 # Description
 Node-RED is a programming tool for wiring together hardware devices, APIs and online services.
 
-# Settings
-Use your own password.
-Create env PASSWORD="password"
-
 # Run
-docker run -d -p 8080:80 yoctu/nodered
+docker run -d -p 8080:80 nodered/node-red
 
 # Hosting
 Check https://openode.io for hosting
 
-Default access is admin/password
