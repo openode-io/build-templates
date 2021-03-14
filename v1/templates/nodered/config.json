@@ -1,4 +1,5 @@
 {
   "name": "nodered",
-  "logo_filename": "logo.png"
+  "logo_filename": "logo.png",
+  "image": "nodered/node-red"
 }
